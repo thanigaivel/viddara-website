@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(\\(Get-ChildItem -Path \"d:\\\\viddara\\\\website\" -Force\\).Count)"
+      "PowerShell(\\(Get-ChildItem -Path \"d:\\\\viddara\\\\website\" -Force\\).Count)",
+      "Bash(npm install *)"
     ]
   }
 }
