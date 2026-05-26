@@ -197,7 +197,7 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
           style={{ opacity: 0 }}
         >
-          <CTAButton href="https://mindtrade.in" external variant="primary">
+          <CTAButton href="https://mindtradein.netlify.app/" external variant="primary">
             Explore MindTrade
           </CTAButton>
           <CTAButton href="/about" variant="secondary">

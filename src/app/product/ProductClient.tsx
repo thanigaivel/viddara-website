@@ -655,7 +655,7 @@ export default function ProductClient() {
             patterns that define every trade. MindTrade turns behavioral awareness into lasting discipline.
           </p>
           <div className="pd-cta-btns flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton href="https://mindtrade.in" external variant="primary">Visit MindTrade</CTAButton>
+            <CTAButton href="https://mindtradein.netlify.app/" external variant="primary">Visit MindTrade</CTAButton>
             <CTAButton href="/technology" variant="secondary">Our Technology</CTAButton>
           </div>
         </div>

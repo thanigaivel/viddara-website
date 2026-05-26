@@ -202,7 +202,7 @@ export default function ProductSection() {
             </ul>
 
             <div className="prod-cta">
-              <CTAButton href="https://mindtrade.in" external variant="primary">
+              <CTAButton href="https://mindtradein.netlify.app/" external variant="primary">
                 Visit MindTrade →
               </CTAButton>
             </div>

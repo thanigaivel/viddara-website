@@ -220,7 +220,7 @@ export default function Footer() {
 
             {/* MindTrade product card */}
             <a
-              href="https://mindtrade.in"
+              href="https://mindtradein.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative block rounded-xl p-4 overflow-hidden transition-all duration-400"

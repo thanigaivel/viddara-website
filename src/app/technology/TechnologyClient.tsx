@@ -731,7 +731,7 @@ export default function TechnologyClient() {
             delivering real-time behavioral intelligence that transforms how traders make decisions.
           </p>
           <div className="th-cta-btns flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton href="https://mindtrade.in" external variant="primary">Explore MindTrade</CTAButton>
+            <CTAButton href="https://mindtradein.netlify.app/" external variant="primary">Explore MindTrade</CTAButton>
             <CTAButton href="/about" variant="secondary">Our Approach</CTAButton>
           </div>
         </div>
