@@ -1,6 +1,7 @@
 import HeroSection from '@/components/home/HeroSection';
 import ProblemSection from '@/components/home/ProblemSection';
 import ApproachSection from '@/components/home/ApproachSection';
+import DifferentLensSection from '@/components/home/DifferentLensSection';
 import ProductSection from '@/components/home/ProductSection';
 import VisionSection from '@/components/home/VisionSection';
 
@@ -10,6 +11,7 @@ export default function HomePage() {
       <HeroSection />
       <ProblemSection />
       <ApproachSection />
+      <DifferentLensSection />
       <ProductSection />
       <VisionSection />
     </>

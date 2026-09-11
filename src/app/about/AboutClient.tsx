@@ -42,33 +42,33 @@ const HERO_GRADS = [
 const CAPABILITIES = [
   {
     icon: 'network' as const,
-    title: 'Behavioral Analysis',
-    desc: 'Mapping the recurring patterns that govern how individuals make decisions under stress, uncertainty, and time pressure.',
+    title: 'Behavioural Awareness',
+    desc: 'Understanding the recurring patterns that influence how individuals make decisions under stress, uncertainty, and time pressure.',
   },
   {
     icon: 'target' as const,
-    title: 'Decision Intelligence',
-    desc: 'Converting raw behavioral data into precise, actionable intelligence that practitioners can immediately apply.',
+    title: 'Decision Discipline',
+    desc: 'Helping individuals develop greater awareness of their decision behaviour and build stronger consistency over time.',
   },
   {
     icon: 'trend' as const,
-    title: 'Performance Systems',
-    desc: 'Building structured platforms that help individuals develop lasting decision discipline over time.',
+    title: 'Performance Insight',
+    desc: 'Building structured systems that help individuals understand their actions and develop lasting decision discipline.',
   },
 ];
 
 const VALUES = [
-  { icon: 'depth' as const, title: 'Depth', desc: 'We go beneath surface metrics into the behavioral science that drives meaningful, lasting change.' },
-  { icon: 'precision' as const, title: 'Precision', desc: 'Every insight is evidence-based and specific to the individual practitioner.' },
+  { icon: 'depth' as const, title: 'Depth', desc: 'We go beneath surface metrics into the behavioural understanding that drives meaningful, lasting change.' },
+  { icon: 'precision' as const, title: 'Precision', desc: 'Every insight is specific to the individual practitioner and their unique decision patterns.' },
   { icon: 'impact' as const, title: 'Impact', desc: 'Technology only matters when it produces measurable improvements in real outcomes.' },
-  { icon: 'evolution' as const, title: 'Evolution', desc: 'Our systems learn and grow alongside each user, becoming sharper and more precise over time.' },
+  { icon: 'evolution' as const, title: 'Awareness', desc: 'We believe that understanding behaviour is the foundation for meaningful, lasting improvement.' },
 ];
 
 const MILESTONES = [
-  { year: '2023', title: 'Inception', desc: 'Viddara Technologies founded with a mission to solve behavioral discipline challenges in high-performance environments.' },
-  { year: '2024', title: 'Research', desc: 'Deep research into behavioral patterns, decision science, and performance psychology across high-stakes domains.' },
-  { year: '2024', title: 'Launch', desc: 'Launched MindTrade — behavioral discipline platform for traders — as our first product in market.' },
-  { year: '2025+', title: 'Expansion', desc: 'Expanding behavioral intelligence technology beyond trading into every domain where discipline defines outcomes.' },
+  { year: '2024', title: 'Inception', desc: 'Viddara Technologies founded with a mission to understand and improve human decision behaviour through technology.' },
+  { year: '2024', title: 'Research', desc: 'Deep research into behavioural patterns, decision-making, and performance across high-stakes domains.' },
+  { year: '2025', title: 'Launch', desc: 'Launched MindTrade — behavioural discipline platform for traders — as our first product in market.' },
+  { year: '2025+', title: 'Direction', desc: 'Exploring new ways to apply behavioural technology to help people make more deliberate and consistent decisions.' },
 ];
 
 // ── Icon component ────────────────────────────────────────────
@@ -296,15 +296,14 @@ export default function AboutClient() {
           </div>
 
           <p className="ab-hero-sub text-white/55 text-lg leading-relaxed max-w-2xl mx-auto mb-14">
-            We are a behavioral intelligence company building technology that helps individuals
-            understand how they make decisions — and systematically improve them.
+            Focused on understanding and improving human decision behaviour through technology.
           </p>
 
           {/* Stat cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
             {[
-              { label: 'Our Domain', value: 'Behavioral Intelligence' },
-              { label: 'Founded', value: '2026npm' },
+              { label: 'Our Domain', value: 'Behavioural Technology' },
+              { label: 'Founded', value: '2024' },
               { label: 'First Product', value: 'MindTrade' },
             ].map((st, i) => (
               <div key={i} className="ab-hero-stat relative rounded-2xl px-6 py-5 text-center overflow-hidden"
@@ -356,17 +355,18 @@ export default function AboutClient() {
               <div className="ab-story-div mb-9"><GoldDivider /></div>
               <div className="space-y-5">
                 <p className="ab-story-para text-white/55 text-base leading-relaxed">
-                  Viddara Technologies is a behavioral technology company focused on analyzing how
-                  individuals make decisions in high-pressure environments.
+                  Viddara Technologies is a behavioural technology company focused on understanding
+                  how individuals make decisions in high-pressure environments.
                 </p>
                 <p className="ab-story-para text-white/55 text-base leading-relaxed">
                   Many performance challenges are not caused by lack of knowledge, but by how decisions
-                  are executed under stress, uncertainty, and time constraints. We build systems that
-                  address this root cause directly.
+                  are executed under stress, uncertainty, and time constraints. Our work explores how
+                  technology can make patterns in decision behaviour more visible and support greater
+                  awareness and consistency.
                 </p>
                 <p className="ab-story-para text-white/55 text-base leading-relaxed">
-                  Based in Tamil Nadu, India, we work at the intersection of behavioral science,
-                  decision psychology, and performance technology.
+                  Based in Tamil Nadu, India, we work at the intersection of behavioural understanding,
+                  data and software.
                 </p>
               </div>
             </div>
@@ -639,11 +639,11 @@ export default function AboutClient() {
           </h2>
           <div className="flex justify-center mb-9"><GoldDivider centered /></div>
           <p className="ab-cta-sub text-white/50 text-lg leading-relaxed mb-12">
-            Explore MindTrade — our behavioral discipline platform — and experience what it means
-            to make decisions with full psychological awareness.
+            Explore MindTrade — our behavioural discipline platform — and experience what it means
+            to make decisions with greater awareness and consistency.
           </p>
           <div className="ab-cta-btns flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton href="https://mindtradein.netlify.app/" external variant="primary">Explore MindTrade</CTAButton>
+            <CTAButton href="https://mindtrade.in/" external variant="primary">Explore MindTrade</CTAButton>
             <CTAButton href="/contact" variant="secondary">Get in Touch</CTAButton>
           </div>
         </div>

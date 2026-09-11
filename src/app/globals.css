@@ -4,6 +4,7 @@
   --color-navy-darker: #020811;
   --color-navy-dark: #041021;
   --color-navy: #081F3F;
+  --color-navy-secondary: #0E2D5A;
   --color-navy-light: #163768;
   --color-navy-lighter: #2a5298;
   --color-gold: #C8A54A;
@@ -48,6 +49,21 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+@utility text-gradient-heading {
+  background: linear-gradient(135deg, #ffffff 0%, #e0d5b5 42%, #C8A54A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility section-gradient-primary {
+  background: linear-gradient(180deg, #081F3F 0%, #071b38 50%, #081F3F 100%);
+}
+
+@utility section-gradient-secondary {
+  background: linear-gradient(180deg, #081F3F 0%, #0a2246 50%, #081F3F 100%);
 }
 
 

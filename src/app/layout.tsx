@@ -19,8 +19,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Viddara Technologies',
   description:
-    'Viddara Technologies develops behavioral intelligence systems designed to analyze and improve decision patterns in high-pressure environments.',
-  keywords: 'behavioral intelligence, decision discipline, performance, MindTrade',
+    'Viddara Technologies develops technology to help people better understand their decision behaviour and improve consistency in high-pressure environments.',
+  keywords: 'behavioural technology, decision discipline, performance, MindTrade, Viddara',
 };
 
 export default function RootLayout({

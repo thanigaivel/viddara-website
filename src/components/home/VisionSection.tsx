@@ -5,7 +5,7 @@ import GoldDivider from '@/components/ui/GoldDivider';
 import CTAButton from '@/components/ui/CTAButton';
 
 // ── Heading split ───────────────────────────────────────────────
-const HEADING_WORDS = ['Shaping', 'the', 'Future', 'of', 'Human', 'Performance'];
+const HEADING_WORDS = ['Exploring', 'the', 'Future', 'of', 'Behavioral', 'Technology'];
 
 // Color shift: cool white → transitional → warm gold across the words
 const WORD_GRADIENTS = [
@@ -17,22 +17,6 @@ const WORD_GRADIENTS = [
   'linear-gradient(135deg, #dfc87a 0%, #C8A54A 100%)',
 ];
 
-// ── Vision markers ──────────────────────────────────────────────
-const MARKERS = [
-  {
-    title: 'Behavioral Intelligence',
-    desc: 'Deepening the science of how humans make decisions under pressure — across markets, institutions, and high-stakes domains.',
-  },
-  {
-    title: 'Adaptive Technology',
-    desc: 'Building systems that learn from individual behavioral patterns and evolve with each practitioner over time.',
-  },
-  {
-    title: 'Universal Impact',
-    desc: 'Expanding behavioral performance technology from trading into every arena where discipline defines outcomes.',
-  },
-];
-
 // ── Deterministic star field (no Math.random → SSR-safe) ────────
 const STARS = Array.from({ length: 36 }, (_, i) => ({
   cx: ((i * 127 + 43) % 94) + 3,   // 3 – 97 % width
@@ -40,11 +24,6 @@ const STARS = Array.from({ length: 36 }, (_, i) => ({
   r:  0.5 + (i % 4) * 0.3,
   o:  0.07 + (i % 6) * 0.045,
 }));
-
-// ── Timeline SVG geometry ───────────────────────────────────────
-const TL_W = 860, TL_H = 72, TL_Y = 33;
-const NX   = [143, 430, 717] as const;      // node x positions
-const LINE_LEN = NX[2] - NX[0];             // 574
 
 export default function VisionSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -61,10 +40,7 @@ export default function VisionSection() {
       gsap.set('.vis-word',     { opacity: 0, y: 34 });
       gsap.set('.vis-divider',  { opacity: 0, scaleX: 0 });
       gsap.set('.vis-para',     { opacity: 0, y: 20 });
-      gsap.set('.vis-tl-line',  { strokeDashoffset: LINE_LEN });
-      gsap.set('.vis-node',     { scale: 0, transformOrigin: 'center' });
-      gsap.set('.vis-node-lbl', { opacity: 0 });
-      gsap.set('.vis-marker',   { opacity: 0, y: 26 });
+      gsap.set('.vis-closing',  { opacity: 0, y: 20 });
       gsap.set('.vis-cta',      { opacity: 0, y: 18 });
 
       // ── Entry timeline ────────────────────────────────────
@@ -76,10 +52,7 @@ export default function VisionSection() {
         .to('.vis-word',     { opacity: 1, y: 0, duration: 0.65, stagger: 0.09 },             '-=0.2')
         .to('.vis-divider',  { opacity: 1, scaleX: 1, duration: 0.5, ease: 'power2.inOut', transformOrigin: 'center' }, '-=0.3')
         .to('.vis-para',     { opacity: 1, y: 0, duration: 0.7, stagger: 0.22 },              '-=0.35')
-        .to('.vis-tl-line',  { strokeDashoffset: 0, duration: 1.3, ease: 'power2.inOut' },    '-=0.3')
-        .to('.vis-node',     { scale: 1, duration: 0.42, stagger: 0.2, ease: 'back.out(2)' }, '-=1.0')
-        .to('.vis-node-lbl', { opacity: 1, duration: 0.35, stagger: 0.15 },                   '-=0.5')
-        .to('.vis-marker',   { opacity: 1, y: 0, duration: 0.65, stagger: 0.15 },             '-=0.5')
+        .to('.vis-closing',  { opacity: 1, y: 0, duration: 0.8 },                             '-=0.2')
         .to('.vis-cta',      { opacity: 1, y: 0, duration: 0.65 },                            '-=0.3');
 
       // ── Star twinkle (continuous, starts immediately) ─────
@@ -128,7 +101,7 @@ export default function VisionSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px]"
           style={{ background: 'radial-gradient(circle, rgba(200,165,74,0.08) 0%, transparent 62%)', filter: 'blur(50px)' }} />
 
-        {/* Expanding pulse rings (3, staggered 2.33 s apart → continuous 7 s cycle) */}
+        {/* Expanding pulse rings */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           {[0, 1, 2].map(i => (
             <div key={i} className="vis-ring absolute rounded-full"
@@ -150,7 +123,7 @@ export default function VisionSection() {
       <div className="max-w-5xl mx-auto relative z-10">
 
         {/* Header */}
-        <div className="text-center mb-18">
+        <div className="text-center mb-16">
           <p className="vis-eyebrow text-[10px] tracking-[0.36em] uppercase font-semibold text-gold mb-9">
             Looking Ahead
           </p>
@@ -181,98 +154,33 @@ export default function VisionSection() {
           </div>
 
           <div className="max-w-2xl mx-auto space-y-4">
-            <p className="vis-para text-white/50 text-base sm:text-lg leading-relaxed">
-              As technology continues to evolve, the ability to understand human
-              behavior will become increasingly important.
-            </p>
-            <p className="vis-para text-white/50 text-base sm:text-lg leading-relaxed">
-              Viddara aims to contribute to this direction by developing systems
-              that support better awareness, discipline, and decision-making.
+            <p className="vis-para text-white/55 text-base sm:text-lg leading-relaxed">
+              Viddara is exploring new ways to apply technology to human decision behaviour
+              and performance. Our long-term focus is to develop systems that help people
+              better understand their actions, improve discipline and make more deliberate decisions.
             </p>
           </div>
-        </div>
 
-        {/* Vision timeline */}
-        <div className="mb-16">
-          <svg
-            viewBox={`0 0 ${TL_W} ${TL_H}`}
-            className="w-full max-w-3xl mx-auto block"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <linearGradient id="visLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%"   stopColor="#C8A54A" stopOpacity="0.18" />
-                <stop offset="50%"  stopColor="#C8A54A" stopOpacity="0.65" />
-                <stop offset="100%" stopColor="#C8A54A" stopOpacity="0.18" />
-              </linearGradient>
-              <filter id="visNodeGlow">
-                <feGaussianBlur stdDeviation="5" result="b" />
-                <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
-              </filter>
-            </defs>
-
-            {/* Connecting line (draws itself via GSAP strokeDashoffset) */}
-            <line
-              className="vis-tl-line"
-              x1={NX[0]} y1={TL_Y} x2={NX[2]} y2={TL_Y}
-              stroke="url(#visLineGrad)"
-              strokeWidth="1"
-              strokeDasharray={LINE_LEN}
-            />
-
-            {/* Nodes */}
-            {NX.map((nx, i) => (
-              <g key={i} className="vis-node" style={{ transformOrigin: `${nx}px ${TL_Y}px` }}>
-                {/* Outer pulse ring */}
-                <circle cx={nx} cy={TL_Y} r="22"
-                  fill="none" stroke="#C8A54A" strokeWidth="0.5" strokeOpacity="0.1" />
-                {/* Node body */}
-                <circle cx={nx} cy={TL_Y} r="14"
-                  fill="rgba(2,8,17,0.97)"
-                  stroke="#C8A54A" strokeWidth="1.2" strokeOpacity="0.45"
-                  filter="url(#visNodeGlow)" />
-                {/* Index */}
-                <text x={nx} y={TL_Y + 5}
-                  textAnchor="middle"
-                  fill="#C8A54A" fillOpacity="0.78"
-                  fontSize="9" fontFamily="Inter,sans-serif" letterSpacing="1">
-                  0{i + 1}
-                </text>
-              </g>
-            ))}
-
-            {/* Node phase labels */}
-            {(['FOUNDATION', 'EVOLUTION', 'IMPACT'] as const).map((lbl, i) => (
-              <text key={i} className="vis-node-lbl"
-                x={NX[i]} y={TL_H - 1}
-                textAnchor="middle"
-                fill="#C8A54A" fillOpacity="0.32"
-                fontSize="7.5" fontFamily="Inter,sans-serif" letterSpacing="2">
-                {lbl}
-              </text>
-            ))}
-          </svg>
-
-          {/* Marker text blocks (aligned under each node) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 max-w-3xl mx-auto">
-            {MARKERS.map((m, i) => (
-              <div key={i} className="vis-marker text-center">
-                {/* Thin gold top accent */}
-                <div className="w-6 h-px bg-gold mx-auto mb-5" style={{ opacity: 0.4 }} />
-                <h3 className="font-serif text-lg text-white/85 mb-3 leading-snug">
-                  {m.title}
-                </h3>
-                <p className="text-white/40 text-sm leading-relaxed">{m.desc}</p>
-              </div>
-            ))}
+          {/* Closing statement */}
+          <div className="mt-14">
+            <p
+              className="vis-closing font-serif italic text-xl sm:text-2xl leading-relaxed"
+              style={{
+                background: 'linear-gradient(135deg, #ffffff 0%, #e8dfc0 50%, #DFCA8D 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              MindTrade is where our journey begins.
+            </p>
           </div>
         </div>
 
         {/* CTA */}
         <div className="vis-cta flex justify-center">
           <CTAButton href="/about" variant="primary">
-            Explore Our Vision
+            Learn More About Viddara
           </CTAButton>
         </div>
 

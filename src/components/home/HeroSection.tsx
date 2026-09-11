@@ -88,7 +88,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-navy-darker overflow-hidden">
+    <div className="relative min-h-[680px] sm:min-h-[720px] lg:min-h-screen flex items-center justify-center bg-navy-darker overflow-hidden py-12 sm:py-16">
       {/* Three.js background */}
       <div className="absolute inset-0 w-full h-full">
         <HeroCanvas />
@@ -119,21 +119,21 @@ export default function HeroSection() {
       {/* Content */}
       <div
         ref={contentRef}
-        className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto pt-20"
+        className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto"
       >
         {/* Eyebrow tagline */}
         <p
           ref={taglineRef}
-          className="text-gold text-[10px] sm:text-xs tracking-[0.25em] uppercase font-semibold mb-6"
+          className="text-gold text-[10px] sm:text-xs tracking-[0.25em] uppercase font-semibold mb-4 sm:mb-5"
           style={{ opacity: 0 }}
         >
-          Behavioral Intelligence Technology
+          Viddara Technologies
         </p>
 
         {/* Main headline — NO char split, no wrapping issues */}
         <h1
           ref={headlineRef}
-          className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-6 pb-2"
+          className="font-serif text-3xl sm:text-5xl lg:text-6xl 2xl:text-7xl leading-[1.12] mb-4 sm:mb-5"
           style={{ opacity: 0 }}
         >
           <span
@@ -180,16 +180,16 @@ export default function HeroSection() {
         </h1>
 
         <div className="hero-divider" style={{ opacity: 0 }}>
-          <GoldDivider centered className="mb-7" />
+          <GoldDivider centered className="mb-4 sm:mb-5" />
         </div>
 
         <p
           ref={subtextRef}
-          className="text-white/70 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-10"
+          className="text-white/70 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-8"
           style={{ opacity: 0 }}
         >
-          Viddara Technologies develops behavioral intelligence systems designed
-          to analyze and improve decision patterns in high-pressure environments.
+          Viddara Technologies develops technology to help people better understand
+          their decision behaviour and improve consistency in high-pressure environments.
         </p>
 
         <div
@@ -197,11 +197,11 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row gap-4 justify-center"
           style={{ opacity: 0 }}
         >
-          <CTAButton href="https://mindtradein.netlify.app/" external variant="primary">
-            Explore MindTrade
+          <CTAButton href="https://mindtrade.in/" external variant="primary">
+            Explore MindTrade →
           </CTAButton>
           <CTAButton href="/about" variant="secondary">
-            Learn More
+            About Viddara →
           </CTAButton>
         </div>
       </div>
@@ -209,10 +209,10 @@ export default function HeroSection() {
       {/* Scroll indicator */}
       <div
         ref={scrollRef}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="absolute bottom-3 sm:bottom-5 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 pointer-events-none select-none hidden sm:flex"
         style={{ opacity: 0 }}
       >
-        <span className="text-white/30 text-[9px] tracking-[0.2em] uppercase mb-2">Scroll</span>
+        <span className="text-white/30 text-[9px] tracking-[0.2em] uppercase">Scroll</span>
         <div className="relative w-5 h-8 border border-white/20 rounded-full flex justify-center pt-1.5">
           <div
             className="w-1 h-1.5 bg-gold rounded-full"

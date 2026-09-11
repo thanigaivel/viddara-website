@@ -27,27 +27,27 @@ const ARCS = [
 ];
 
 const NODE_LABELS = [
-  { x: N1.x,      y: N1.y - 24, anchor: 'middle' as const, text: 'OBSERVE'  },
-  { x: N2.x + 22, y: N2.y +  5, anchor: 'start'  as const, text: 'ANALYZE'  },
-  { x: N3.x - 22, y: N3.y +  5, anchor: 'end'    as const, text: 'IMPROVE'  },
+  { x: N1.x,      y: N1.y - 24, anchor: 'middle' as const, text: 'UNDERSTAND'  },
+  { x: N2.x + 22, y: N2.y +  5, anchor: 'start'  as const, text: 'REFLECT'     },
+  { x: N3.x - 22, y: N3.y +  5, anchor: 'end'    as const, text: 'IMPROVE'     },
 ];
 
 // ── Pillars ────────────────────────────────────────────────────
 const PILLARS = [
   {
-    num: '01', label: 'OBSERVE',
-    title: 'Behavior Awareness',
-    desc: 'Identify recurring decision patterns and behavioral tendencies that surface under pressure — the first step toward disciplined, consistent performance.',
+    num: '01', label: 'UNDERSTAND',
+    title: 'Understand Behaviour',
+    desc: 'Recognize patterns in how decisions are made across different situations.',
   },
   {
-    num: '02', label: 'ANALYZE',
-    title: 'Performance Discipline',
-    desc: 'Build consistency in high-stakes environments through structured behavioral feedback that reinforces optimal decision-making pathways over time.',
+    num: '02', label: 'REFLECT',
+    title: 'Understand the Decision',
+    desc: 'Examine behavioural tendencies that may influence consistency and performance.',
   },
   {
     num: '03', label: 'IMPROVE',
-    title: 'Structured Insights',
-    desc: 'Translate behavioral data into clear, actionable intelligence — illuminating the patterns that drive measurable, sustained improvement.',
+    title: 'Build Better Discipline',
+    desc: 'Turn behavioural awareness into more deliberate and consistent decision-making.',
   },
 ];
 
@@ -157,11 +157,11 @@ export default function ApproachSection() {
           <div className="appr-divider flex justify-center mb-8">
             <GoldDivider centered />
           </div>
-          <div ref={subtitleRef} className="max-w-2xl mx-auto space-y-3 text-white/50 text-base leading-relaxed">
-            <p>Viddara focuses on understanding how decisions are made under pressure.</p>
+          <div ref={subtitleRef} className="max-w-2xl mx-auto space-y-3 text-white/55 text-base leading-relaxed">
             <p>
-              Our work explores the behavioral patterns that influence performance, helping
-              individuals gain deeper awareness and improve decision discipline over time.
+              Viddara explores how people respond to uncertainty, pressure and changing conditions.
+              Our approach focuses on making patterns in decision behaviour more visible, helping
+              people develop greater awareness and consistency.
             </p>
           </div>
         </div>
@@ -254,7 +254,7 @@ export default function ApproachSection() {
               <text x={CX} y={CY + 7} textAnchor="middle"
                 fill="#C8A54A" fillOpacity="0.5" fontSize="7.5"
                 fontFamily="Inter,sans-serif" letterSpacing="2" fontWeight="500">
-                INTELLIGENCE
+                APPROACH
               </text>
             </g>
 

@@ -8,7 +8,6 @@ const NAV_LINKS = [
   { href: '/',            label: 'Home'       },
   { href: '/about',       label: 'About'      },
   { href: '/technology',  label: 'Technology' },
-  { href: '/product',     label: 'Product'    },
   { href: '/contact',     label: 'Contact'    },
 ];
 
@@ -123,7 +122,7 @@ export default function Footer() {
 
           <p className="text-[9.5px] tracking-[0.32em] uppercase font-medium"
             style={{ color: 'rgba(200,165,74,0.42)' }}>
-            Behavioral Intelligence Systems
+            Behavioural Technology
           </p>
         </div>
 
@@ -142,9 +141,8 @@ export default function Footer() {
             </h4>
             <p className="text-sm leading-relaxed mb-5"
               style={{ color: 'rgba(255,255,255,0.42)' }}>
-              Building behavioral intelligence technology to help individuals understand
-              and improve their decision-making under pressure — across trading, learning,
-              and professional environments.
+              Building behavioural technology to help individuals understand
+              and improve their decision-making under pressure.
             </p>
             <p className="text-xs tracking-wide" style={{ color: 'rgba(255,255,255,0.26)' }}>
               Tamil Nadu, India
@@ -220,7 +218,7 @@ export default function Footer() {
 
             {/* MindTrade product card */}
             <a
-              href="https://mindtradein.netlify.app/"
+              href="https://mindtrade.in/"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative block rounded-xl p-4 overflow-hidden transition-all duration-400"
@@ -281,9 +279,15 @@ export default function Footer() {
           <p className="text-xs tracking-wide" style={{ color: 'rgba(255,255,255,0.24)' }}>
             © {year} Viddara Technologies Pvt. Ltd. · All rights reserved.
           </p>
-          <p className="text-[10px] tracking-[0.22em] uppercase" style={{ color: 'rgba(255,255,255,0.16)' }}>
-            Built for Performance
-          </p>
+          <div className="flex items-center gap-4">
+            <a href="#" className="text-[10px] tracking-[0.18em] uppercase transition-colors duration-200" style={{ color: 'rgba(255,255,255,0.22)' }}
+              onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.color = 'rgba(200,165,74,0.6)')}
+              onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.22)')}>Privacy Policy</a>
+            <span style={{ color: 'rgba(255,255,255,0.12)' }}>·</span>
+            <a href="#" className="text-[10px] tracking-[0.18em] uppercase transition-colors duration-200" style={{ color: 'rgba(255,255,255,0.22)' }}
+              onMouseEnter={e => ((e.currentTarget as HTMLAnchorElement).style.color = 'rgba(200,165,74,0.6)')}
+              onMouseLeave={e => ((e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.22)')}>Terms of Use</a>
+          </div>
         </div>
 
       </div>
