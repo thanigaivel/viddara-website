@@ -21,6 +21,17 @@ export const metadata: Metadata = {
   description:
     'Viddara Technologies develops technology to help people better understand their decision behaviour and improve consistency in high-pressure environments.',
   keywords: 'behavioural technology, decision discipline, performance, MindTrade, Viddara',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/icon.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
